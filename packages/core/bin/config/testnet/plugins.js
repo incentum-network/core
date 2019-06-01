@@ -2,6 +2,7 @@ module.exports = {
     "@arkecosystem/core-event-emitter": {},
     "@arkecosystem/core-logger-pino": {},
     "@arkecosystem/core-state": {},
+    "@incentum/praxis-transactions": {},
     "@arkecosystem/core-database-postgres": {
         connection: {
             host: process.env.CORE_DB_HOST || "localhost",
@@ -29,6 +30,8 @@ module.exports = {
                 timelockTransfer: 500,
                 multiPayment: 500,
                 delegateResignation: 100,
+                contractStart: 500,
+                contractAction: 500,
             },
         },
     },

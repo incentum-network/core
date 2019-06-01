@@ -225,7 +225,7 @@ describe("Wallet Manager", () => {
                 expect(+recipient.balance.toFixed()).toBe(0);
 
                 try {
-                    expect(walletManager.applyTransaction(transaction)).rejects.toThrow(InsufficientBalanceError);
+                    expect(await walletManager.applyTransaction(transaction)).rejects.toThrow(InsufficientBalanceError);
                     expect(undefined).toBe("this should fail if no error is thrown");
                 } catch (error) {
                     expect(+sender.balance.toFixed()).toBe(+balanceFail);
@@ -287,12 +287,12 @@ describe("Wallet Manager", () => {
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000));
             expect(voter.balance).toEqual(Utils.BigNumber.make(100_000));
 
-            walletManager.applyTransaction(voteTransaction);
+            await walletManager.applyTransaction(voteTransaction);
 
             expect(voter.balance).toEqual(Utils.BigNumber.make(100_000).minus(voteTransaction.data.fee));
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000).plus(voter.balance));
 
-            walletManager.revertTransaction(voteTransaction);
+            await walletManager.revertTransaction(voteTransaction);
 
             expect(voter.balance).toEqual(Utils.BigNumber.make(100_000));
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000));
@@ -322,7 +322,7 @@ describe("Wallet Manager", () => {
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000));
             expect(voter.balance).toEqual(Utils.BigNumber.make(100_000));
 
-            walletManager.applyTransaction(voteTransaction);
+            await walletManager.applyTransaction(voteTransaction);
 
             expect(voter.balance).toEqual(Utils.BigNumber.make(100_000).minus(voteTransaction.data.fee));
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000).plus(voter.balance));
@@ -333,7 +333,7 @@ describe("Wallet Manager", () => {
                 .sign("secret")
                 .build();
 
-            walletManager.applyTransaction(unvoteTransaction);
+            await walletManager.applyTransaction(unvoteTransaction);
 
             expect(voter.balance).toEqual(
                 Utils.BigNumber.make(100_000)
@@ -342,7 +342,7 @@ describe("Wallet Manager", () => {
             );
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000));
 
-            walletManager.revertTransaction(unvoteTransaction);
+            await walletManager.revertTransaction(unvoteTransaction);
 
             expect(voter.balance).toEqual(Utils.BigNumber.make(100_000).minus(voteTransaction.data.fee));
             expect(delegate.voteBalance).toEqual(Utils.BigNumber.make(100_000_000).plus(voter.balance));

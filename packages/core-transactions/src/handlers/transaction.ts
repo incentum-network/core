@@ -1,6 +1,5 @@
 // tslint:disable:max-classes-per-file
 // tslint:disable:member-ordering
-
 import { Database, EventEmitter, State, TransactionPool } from "@arkecosystem/core-interfaces";
 import { Enums, Interfaces, Managers, Transactions } from "@arkecosystem/crypto";
 import {
@@ -95,12 +94,12 @@ export abstract class TransactionHandler implements ITransactionHandler {
         return true;
     }
 
-    public apply(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+    public async apply(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
         this.applyToSender(transaction, walletManager);
         this.applyToRecipient(transaction, walletManager);
     }
 
-    public revert(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void {
+    public async revert(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void> {
         this.revertForSender(transaction, walletManager);
         this.revertForRecipient(transaction, walletManager);
     }

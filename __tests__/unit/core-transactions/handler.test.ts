@@ -127,11 +127,11 @@ describe("General Tests", () => {
     });
 
     describe("apply", () => {
-        it("should be ok", () => {
+        it("should be ok", async () => {
             const senderBalance = senderWallet.balance;
             const recipientBalance = recipientWallet.balance;
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
 
             expect(senderWallet.balance).toEqual(
                 Utils.BigNumber.make(senderBalance)
@@ -142,14 +142,14 @@ describe("General Tests", () => {
             expect(recipientWallet.balance).toEqual(Utils.BigNumber.make(recipientBalance).plus(instance.data.amount));
         });
 
-        it("should not fail due to case mismatch", () => {
+        it("should not fail due to case mismatch", async () => {
             transaction.senderPublicKey = transaction.senderPublicKey.toUpperCase();
             const instance = Transactions.TransactionFactory.fromData(transaction);
 
             const senderBalance = senderWallet.balance;
             const recipientBalance = recipientWallet.balance;
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
 
             expect(senderWallet.balance).toEqual(
                 Utils.BigNumber.make(senderBalance)
@@ -162,11 +162,11 @@ describe("General Tests", () => {
     });
 
     describe("revert", () => {
-        it("should be ok", () => {
+        it("should be ok", async () => {
             const senderBalance = senderWallet.balance;
             const recipientBalance = recipientWallet.balance;
 
-            handler.revert(instance, walletManager);
+            await handler.revert(instance, walletManager);
             expect(senderWallet.balance).toEqual(
                 Utils.BigNumber.make(senderBalance)
                     .plus(instance.data.amount)
@@ -176,14 +176,14 @@ describe("General Tests", () => {
             expect(recipientWallet.balance).toEqual(Utils.BigNumber.make(recipientBalance).minus(instance.data.amount));
         });
 
-        it("should not fail due to case mismatch", () => {
+        it("should not fail due to case mismatch", async () => {
             transaction.senderPublicKey = transaction.senderPublicKey.toUpperCase();
             const instance = Transactions.TransactionFactory.fromData(transaction);
 
             const senderBalance = senderWallet.balance;
             const recipientBalance = recipientWallet.balance;
 
-            handler.revert(instance, walletManager);
+            await handler.revert(instance, walletManager);
             expect(senderWallet.balance).toEqual(
                 Utils.BigNumber.make(senderBalance)
                     .plus(instance.data.amount)
@@ -270,19 +270,19 @@ describe("SecondSignatureRegistrationTransaction", () => {
     });
 
     describe("apply", () => {
-        it("should apply second signature registration", () => {
+        it("should apply second signature registration", async () => {
             expect(handler.canBeApplied(instance, senderWallet, walletManager)).toBeTrue();
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
             expect(senderWallet.secondPublicKey).toBe(
                 "02d5cfcbc4920d041d2a54b29e1f69173536796fd50f62af0f88ad6adc6df07cb8",
             );
         });
 
-        it("should be invalid to apply a second signature registration twice", () => {
+        it("should be invalid to apply a second signature registration twice", async () => {
             expect(handler.canBeApplied(instance, senderWallet, walletManager)).toBeTrue();
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
             expect(senderWallet.secondPublicKey).toBe(
                 "02d5cfcbc4920d041d2a54b29e1f69173536796fd50f62af0f88ad6adc6df07cb8",
             );
@@ -294,16 +294,16 @@ describe("SecondSignatureRegistrationTransaction", () => {
     });
 
     describe("revert", () => {
-        it("should be ok", () => {
+        it("should be ok", async () => {
             expect(senderWallet.secondPublicKey).toBeUndefined();
             expect(handler.canBeApplied(instance, senderWallet, walletManager)).toBeTrue();
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
             expect(senderWallet.secondPublicKey).toBe(
                 "02d5cfcbc4920d041d2a54b29e1f69173536796fd50f62af0f88ad6adc6df07cb8",
             );
 
-            handler.revert(instance, walletManager);
+            await handler.revert(instance, walletManager);
             expect(senderWallet.secondPublicKey).toBeUndefined();
         });
     });
@@ -361,15 +361,15 @@ describe("DelegateRegistrationTransaction", () => {
     });
 
     describe("apply", () => {
-        it("should set username", () => {
-            handler.apply(instance, walletManager);
+        it("should set username", async () => {
+            await handler.apply(instance, walletManager);
             expect(senderWallet.username).toBe("dummy");
         });
     });
 
     describe("revert", () => {
-        it("should unset username", () => {
-            handler.revert(instance, walletManager);
+        it("should unset username", async () => {
+            await handler.revert(instance, walletManager);
             expect(senderWallet.username).toBeUndefined();
         });
     });
@@ -463,32 +463,32 @@ describe("VoteTransaction", () => {
 
     describe("apply", () => {
         describe("vote", () => {
-            it("should be ok", () => {
+            it("should be ok", async () => {
                 expect(senderWallet.vote).toBeUndefined();
 
-                handler.apply(instance, walletManager);
+                await handler.apply(instance, walletManager);
                 expect(senderWallet.vote).not.toBeUndefined();
             });
 
-            it("should not be ok", () => {
+            it("should not be ok", async () => {
                 senderWallet.vote = "02d0d835266297f15c192be2636eb3fbc30b39b87fc583ff112062ef8ae1a1f2af";
 
                 expect(senderWallet.vote).not.toBeUndefined();
 
-                handler.apply(instance, walletManager);
+                await handler.apply(instance, walletManager);
 
                 expect(senderWallet.vote).not.toBeUndefined();
             });
         });
 
         describe("unvote", () => {
-            it("should remove the vote from the wallet", () => {
+            it("should remove the vote from the wallet", async () => {
                 senderWallet.vote = "02d0d835266297f15c192be2636eb3fbc30b39b87fc583ff112062ef8ae1a1f2af";
 
                 expect(senderWallet.vote).not.toBeUndefined();
 
                 instance = Transactions.TransactionFactory.fromData(unvoteTransaction);
-                handler.apply(instance, walletManager);
+                await handler.apply(instance, walletManager);
 
                 expect(senderWallet.vote).toBeUndefined();
             });
@@ -497,23 +497,23 @@ describe("VoteTransaction", () => {
 
     describe("revert", () => {
         describe("vote", () => {
-            it("should remove the vote from the wallet", () => {
+            it("should remove the vote from the wallet", async () => {
                 senderWallet.vote = "02d0d835266297f15c192be2636eb3fbc30b39b87fc583ff112062ef8ae1a1f2af";
 
                 expect(senderWallet.vote).not.toBeUndefined();
 
-                handler.revert(instance, walletManager);
+                await handler.revert(instance, walletManager);
 
                 expect(senderWallet.vote).toBeUndefined();
             });
         });
 
         describe("unvote", () => {
-            it("should add the vote to the wallet", () => {
+            it("should add the vote to the wallet", async () => {
                 expect(senderWallet.vote).toBeUndefined();
 
                 instance = Transactions.TransactionFactory.fromData(unvoteTransaction);
-                handler.revert(instance, walletManager);
+                await handler.revert(instance, walletManager);
 
                 expect(senderWallet.vote).toBe("02d0d835266297f15c192be2636eb3fbc30b39b87fc583ff112062ef8ae1a1f2af");
             });
@@ -601,7 +601,7 @@ describe("MultiSignatureRegistrationTransaction", () => {
     });
 
     describe("apply", () => {
-        it("should be ok", () => {
+        it("should be ok", async () => {
             recipientWallet.multisignature = undefined;
 
             expect(senderWallet.multisignature).toBeUndefined();
@@ -610,7 +610,7 @@ describe("MultiSignatureRegistrationTransaction", () => {
             expect(senderWallet.balance).toEqual(Utils.BigNumber.make(100390000000));
             expect(recipientWallet.balance).toEqual(Utils.BigNumber.ZERO);
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
 
             expect(senderWallet.balance).toEqual(Utils.BigNumber.make(98390000000));
             expect(recipientWallet.balance).toEqual(Utils.BigNumber.ZERO);
@@ -621,8 +621,8 @@ describe("MultiSignatureRegistrationTransaction", () => {
     });
 
     describe("revert", () => {
-        it("should be ok", () => {
-            handler.revert(instance, walletManager);
+        it("should be ok", async () => {
+            await handler.revert(instance, walletManager);
 
             expect(senderWallet.multisignature).toBeUndefined();
             expect(recipientWallet.multisignature).toBeUndefined();
@@ -678,12 +678,12 @@ describe("Ipfs", () => {
     });
 
     describe("apply", () => {
-        it("should apply ipfs transaction", () => {
+        it("should apply ipfs transaction", async () => {
             expect(handler.canBeApplied(instance, senderWallet, walletManager)).toBeTrue();
 
             const balanceBefore = senderWallet.balance;
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
 
             expect(senderWallet.ipfsHashes[transaction.asset.ipfs]).toBeTrue();
             expect(senderWallet.balance).toEqual(balanceBefore.minus(transaction.fee));
@@ -691,17 +691,17 @@ describe("Ipfs", () => {
     });
 
     describe("revert", () => {
-        it("should be ok", () => {
+        it("should be ok", async () => {
             expect(handler.canBeApplied(instance, senderWallet, walletManager)).toBeTrue();
 
             const balanceBefore = senderWallet.balance;
 
-            handler.apply(instance, walletManager);
+            await handler.apply(instance, walletManager);
 
             expect(senderWallet.balance).toEqual(balanceBefore.minus(transaction.fee));
             expect(senderWallet.ipfsHashes[transaction.asset.ipfs]).toBeTrue();
 
-            handler.revert(instance, walletManager);
+            await handler.revert(instance, walletManager);
 
             expect(senderWallet.ipfsHashes[transaction.asset.ipfs]).toBeUndefined();
             expect(senderWallet.balance).toEqual(balanceBefore);

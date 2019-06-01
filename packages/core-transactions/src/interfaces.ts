@@ -13,8 +13,8 @@ export interface ITransactionHandler {
         wallet: State.IWallet,
         databaseWalletManager: State.IWalletManager,
     ): boolean;
-    apply(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void;
-    revert(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): void;
+    apply(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void>;
+    revert(transaction: Interfaces.ITransaction, walletManager: State.IWalletManager): Promise<void>;
 
     canEnterTransactionPool(
         data: Interfaces.ITransactionData,

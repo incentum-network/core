@@ -163,7 +163,7 @@ export class WalletManager implements State.IWalletManager {
         }
     }
 
-    public applyBlock(block: Interfaces.IBlock): void {
+    public async applyBlock(block: Interfaces.IBlock): Promise<void> {
         const generatorPublicKey: string = block.data.generatorPublicKey;
 
         let delegate: State.IWallet = this.byPublicKey[block.data.generatorPublicKey];
@@ -191,7 +191,7 @@ export class WalletManager implements State.IWalletManager {
 
         try {
             for (const transaction of block.transactions) {
-                this.applyTransaction(transaction);
+                await this.applyTransaction(transaction);
                 appliedTransactions.push(transaction);
             }
 
@@ -210,14 +210,14 @@ export class WalletManager implements State.IWalletManager {
 
             // Revert the applied transactions from last to first
             for (const transaction of appliedTransactions.reverse()) {
-                this.revertTransaction(transaction);
+                await this.revertTransaction(transaction);
             }
 
             throw error;
         }
     }
 
-    public revertBlock(block: Interfaces.IBlock): void {
+    public async revertBlock(block: Interfaces.IBlock): Promise<void> {
         const delegate: State.IWallet = this.byPublicKey[block.data.generatorPublicKey];
 
         if (!delegate) {
@@ -230,7 +230,7 @@ export class WalletManager implements State.IWalletManager {
             // Revert the transactions from last to first
             for (let i = block.transactions.length - 1; i >= 0; i--) {
                 const transaction: Interfaces.ITransaction = block.transactions[i];
-                this.revertTransaction(transaction);
+                await this.revertTransaction(transaction);
                 revertedTransactions.push(transaction);
             }
 
@@ -248,14 +248,14 @@ export class WalletManager implements State.IWalletManager {
             this.logger.error(error.stack);
 
             for (const transaction of revertedTransactions.reverse()) {
-                this.applyTransaction(transaction);
+                await this.applyTransaction(transaction);
             }
 
             throw error;
         }
     }
 
-    public applyTransaction(transaction: Interfaces.ITransaction): void {
+    public async applyTransaction(transaction: Interfaces.ITransaction): Promise<void> {
         const { data } = transaction;
         const { recipientId, senderPublicKey } = data;
 
@@ -277,19 +277,19 @@ export class WalletManager implements State.IWalletManager {
                 throw new Error(`Can't apply transaction ${data.id}`);
             }
         }
-
-        transactionHandler.apply(transaction, this);
+        
+        await transactionHandler.apply(transaction, this);
         this.updateVoteBalances(sender, recipient, data);
     }
 
-    public revertTransaction(transaction: Interfaces.ITransaction): void {
+    public async revertTransaction(transaction: Interfaces.ITransaction): Promise<void> {
         const { data } = transaction;
 
         const transactionHandler: Handlers.TransactionHandler = Handlers.Registry.get(transaction.type);
         const sender: State.IWallet = this.findByPublicKey(data.senderPublicKey);
         const recipient: State.IWallet = this.byAddress[data.recipientId];
 
-        transactionHandler.revert(transaction, this);
+        await transactionHandler.revert(transaction, this);
 
         // Revert vote balance updates
         this.updateVoteBalances(sender, recipient, data, true);

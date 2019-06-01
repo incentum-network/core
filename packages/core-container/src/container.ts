@@ -59,6 +59,7 @@ export class Container implements container.IContainer {
         this.config = await configManager.setUp(variables);
 
         // TODO: Move this out eventually - not really the responsibility of the container
+
         this.plugins = new PluginRegistrar(this, options);
         await this.plugins.setUp();
 

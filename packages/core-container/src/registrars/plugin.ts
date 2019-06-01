@@ -26,7 +26,6 @@ export class PluginRegistrar {
     public async setUp() {
         for (const [name, options] of Object.entries(this.plugins)) {
             await this.register(name, options);
-
             if ((this.options.exit && this.options.exit === name) || this.container.shuttingDown) {
                 break;
             }
@@ -75,6 +74,11 @@ export class PluginRegistrar {
         } catch (error) {
             this.failedPlugins[name] = error;
         }
+    }
+
+    private logInfo(msg: string, force?: boolean): void {
+        const logger = (this.container as Container.IContainer).resolvePlugin<Logger.ILogger>("logger");
+        if (logger && (!!force || false)) { logger.info(msg)}
     }
 
     /**
