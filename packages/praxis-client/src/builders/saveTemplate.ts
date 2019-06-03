@@ -5,7 +5,7 @@ import { TransactionTypes } from "../enums";
 export class SaveTemplateBuilder extends Transactions.TransactionBuilder<SaveTemplateBuilder> {
     constructor(fee: Utils.BigNumber) {
         super();
-        this.data.type = TransactionTypes.ContractStart as number;
+        this.data.type = TransactionTypes.SaveTemplate as number;
         this.data.fee = fee;
         this.data.amount = Utils.BigNumber.ZERO;
         this.data.asset = {};

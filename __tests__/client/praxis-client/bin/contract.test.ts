@@ -6,12 +6,12 @@ import { ContractStartBuilder, SaveTemplateBuilder } from "@incentum/praxis-clie
 import {
     ActionJson,
     ContractStartPayload,
-    createActionJson,
+    createStartActionJson,
     hashJson,
-    hashString,
-    random,
+    ReducerJson,
     SaveTemplatePayload,
     TemplateJson,
+    toTemplateJson,
 } from "@incentum/praxis-interfaces";
 
 import { testnetSecrets } from "./secrets";
@@ -24,17 +24,29 @@ afterAll(async () => {
     return;
 });
 
+const code = `
+(
+    $x.result($state, [])
+)
+`;
+
+const startReducer: ReducerJson = {
+    code,
+    type: "start",
+    language: "jsonata",
+};
+
 const getTemplate = (ledger: string): TemplateJson => {
     return {
         ledger,
         name: "test",
         versionMajor: 1,
         versionMinor: 0,
-        versionPatch: 0,
+        versionPatch: 2,
         description: "description",
-        reducers: [],
         other: {},
         tags: [],
+        reducers: [startReducer],
     };
 };
 
@@ -50,6 +62,11 @@ describe("Praxis Client Transactions", () => {
             template,
         } as SaveTemplatePayload;
 
+        const to = toTemplateJson(template);
+        console.log("to", to);
+        const hash = hashJson(to);
+        console.log("hash", hash);
+
         const fee = new Utils.BigNumber(500000000);
         const builder = new SaveTemplateBuilder(fee);
         const transaction = builder
@@ -61,6 +78,7 @@ describe("Praxis Client Transactions", () => {
 
         try {
             const response = await testnetClient.resource("transactions").create({ transactions: [transaction] });
+            console.log(response.data);
             console.log(response.data.errors);
         } catch (error) {
             console.error("error", error);
@@ -73,9 +91,8 @@ describe("Praxis Client Transactions", () => {
         const secret = testnetSecrets[0];
         const ledger: string = Identities.Address.fromPassphrase(secret);
         const template = getTemplate(ledger);
-        const contractHash = hashJson(template);
 
-        const action: ActionJson = createActionJson(ledger, contractHash);
+        const action: ActionJson = createStartActionJson(ledger, template);
 
         const payload: ContractStartPayload = {
             action,

@@ -5,7 +5,7 @@ import { TransactionTypes } from "../enums";
 export class ContractActionBuilder extends Transactions.TransactionBuilder<ContractActionBuilder> {
     constructor(fee: Utils.BigNumber) {
         super();
-        this.data.type = TransactionTypes.ContractStart as number;
+        this.data.type = TransactionTypes.ContractAction as number;
         this.data.fee = fee;
         this.data.amount = Utils.BigNumber.ZERO;
         this.data.asset = {};

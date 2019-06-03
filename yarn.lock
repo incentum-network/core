@@ -1030,12 +1030,12 @@
     "@hapi/bourne" "1.x.x"
     "@hapi/hoek" "6.x.x"
 
-"@incentum/praxis-contracts@^1.0.338":
-  version "1.0.338"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.338.tgz#f8f84f355b30d46bb4e6b32ef97b50f2570632fb"
-  integrity sha512-AjdhCFPTn1mTAZ9/60r2+RzgHEAemDEUqCbaZSiu+kj9j/8iOnJqySrg40++w6e959fO9j8dg1Q3jizcWnHjSA==
+"@incentum/praxis-contracts@^1.0.339":
+  version "1.0.339"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.339.tgz#7bf6fedf4965d08b08438fb401a8a3cd35593ef9"
+  integrity sha512-tMK3ZCxgCFKSFzUh4zwLbLFOuvvRJHlcqM+vp8B2gpbSrL9EtgF6jD8P1urnHeYEhu2iq8FisrWt2/g8/JiNzw==
   dependencies:
-    "@incentum/praxis-interfaces" "^1.0.340"
+    "@incentum/praxis-interfaces" "^1.0.341"
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"
     bignumber.js "^7.2.1"
@@ -1047,13 +1047,13 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.347":
-  version "1.0.347"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.347.tgz#816900142d18145ca4ae7bb9772775c829d3c630"
-  integrity sha512-ejBiQLgcWhS+kbP+W8/p4C29Lfym9ehMdaTYi9gNR8oZg0X1DavI4/liECn5RivU0cDvr+jFlWFDsLqf5HHnjQ==
+"@incentum/praxis-db@^1.0.354":
+  version "1.0.354"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.354.tgz#bf72af6af7dec33d6d397ceb0326ace4fee72d27"
+  integrity sha512-E3QLhWFwPdmm46r7NVKmXln+4Rv2eJ6w1y8JK0u1g3FoGHZNQkmcGttKfBRmj8MLtg32DCnERMu4IA9ml5RBTg==
   dependencies:
-    "@incentum/praxis-contracts" "^1.0.338"
-    "@incentum/praxis-interfaces" "^1.0.340"
+    "@incentum/praxis-contracts" "^1.0.339"
+    "@incentum/praxis-interfaces" "^1.0.341"
     "@types/lodash" "^4.14.113"
     bignumber.js "^8.1.1"
     chai "^4.2.0"
@@ -1065,10 +1065,10 @@
     typeorm "^0.2.7"
     varstruct "^6.1.2"
 
-"@incentum/praxis-interfaces@^1.0.340":
-  version "1.0.340"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.340.tgz#85640eefa59c3c31fbc74860be24aa21f393dacb"
-  integrity sha512-6RELcIB9LnEuzb83TrVbTstJHAg3CRNHJMUg9kJi/Va3OQOfxJ1NkVlcmV2R+VX7LragaDr/yDtkNeMUGiErEQ==
+"@incentum/praxis-interfaces@^1.0.341":
+  version "1.0.341"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.341.tgz#c0d4489a24dcfdc5ce34d3a26b1bd2868d20eb90"
+  integrity sha512-n395m0qMT7OvMj32tbAWE7B+P86epreV9MZevn/Yq971FkKHKza2cNGk7P/pnlS1SQgbDZtwRfz7MBlaibnqyw==
   dependencies:
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"

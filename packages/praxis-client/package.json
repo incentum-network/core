@@ -31,7 +31,7 @@
         "@arkecosystem/client": "^0.1.23",
         "@arkecosystem/core-interfaces": "^2.4.0-next.7",
         "@arkecosystem/crypto": "^2.4.0-next.7",
-        "@incentum/praxis-interfaces": "^1.0.340",
+        "@incentum/praxis-interfaces": "^1.0.341",
         "bytebuffer": "^5.0.1"
     },
     "devDependencies": {
