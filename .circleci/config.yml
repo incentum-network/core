@@ -30,6 +30,7 @@ jobs:
       - save_cache:
           key: 'core-node10-{{ checksum "checksum.txt" }}-unit-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -46,7 +47,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -70,7 +70,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -119,6 +118,7 @@ jobs:
       - save_cache:
           key: 'core-node11-{{ checksum "checksum.txt" }}-unit-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -135,7 +135,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -159,7 +158,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -208,6 +206,7 @@ jobs:
       - save_cache:
           key: 'core-node12-{{ checksum "checksum.txt" }}-unit-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -224,7 +223,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -248,7 +246,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -305,6 +302,7 @@ jobs:
       - save_cache:
           key: 'core-node10-{{ checksum "checksum.txt" }}-functional-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -321,7 +319,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -345,7 +342,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -402,6 +398,7 @@ jobs:
       - save_cache:
           key: 'core-node11-{{ checksum "checksum.txt" }}-functional-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -418,7 +415,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -442,7 +438,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -499,6 +494,7 @@ jobs:
       - save_cache:
           key: 'core-node12-{{ checksum "checksum.txt" }}-functional-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -515,7 +511,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -539,7 +534,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -596,6 +590,7 @@ jobs:
       - save_cache:
           key: 'core-node10-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -612,7 +607,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -636,7 +630,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -718,6 +711,7 @@ jobs:
       - save_cache:
           key: 'core-node11-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -734,7 +728,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -758,7 +751,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -840,6 +832,7 @@ jobs:
       - save_cache:
           key: 'core-node12-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -856,7 +849,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -880,7 +872,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -951,6 +942,7 @@ jobs:
       - save_cache:
           key: 'core-node10-{{ checksum "checksum.txt" }}-benchmark-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -967,7 +959,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -991,7 +982,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Benchmark
           command: cd ~/core && yarn bench
@@ -1022,6 +1012,7 @@ jobs:
       - save_cache:
           key: 'core-node11-{{ checksum "checksum.txt" }}-benchmark-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1038,7 +1029,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1062,7 +1052,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Benchmark
           command: cd ~/core && yarn bench
@@ -1093,6 +1082,7 @@ jobs:
       - save_cache:
           key: 'core-node12-{{ checksum "checksum.txt" }}-benchmark-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1109,7 +1099,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1133,7 +1122,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Benchmark
           command: cd ~/core && yarn bench
@@ -1172,6 +1160,7 @@ jobs:
       - save_cache:
           key: 'ark-node10-e2e-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1188,7 +1177,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1212,7 +1200,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Generate files
           command: >-
@@ -1293,6 +1280,7 @@ jobs:
       - save_cache:
           key: 'ark-node11-e2e-{{ checksum "checksum.txt" }}-2-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1309,7 +1297,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1333,7 +1320,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Generate files
           command: >-
@@ -1414,6 +1400,7 @@ jobs:
       - save_cache:
           key: 'ark-node12-e2e-{{ checksum "checksum.txt" }}-2-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1430,7 +1417,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1454,7 +1440,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Generate files
           command: >-
@@ -1538,6 +1523,7 @@ jobs:
       - save_cache:
           key: 'core-node10-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1554,7 +1540,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1578,7 +1563,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -1660,6 +1644,7 @@ jobs:
       - save_cache:
           key: 'core-node11-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1676,7 +1661,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1700,7 +1684,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database
@@ -1782,6 +1765,7 @@ jobs:
       - save_cache:
           key: 'core-node12-{{ checksum "checksum.txt" }}-1-2'
           paths:
+            - ./packages/core-json-rpc/node_modules
             - ./packages/core-logger/node_modules
             - ./packages/core-logger-pino/node_modules
             - ./packages/core-logger-signale/node_modules
@@ -1798,7 +1782,6 @@ jobs:
             - ./packages/core-wallet-api/node_modules
             - ./packages/core-webhooks/node_modules
             - ./packages/crypto/node_modules
-            - ./packages/praxis-client/node_modules
             - ./node_modules
             - ./__tests__/e2e/node_modules
       - save_cache:
@@ -1822,7 +1805,6 @@ jobs:
             - ./packages/core-http-utils/node_modules
             - ./packages/core-interfaces/node_modules
             - ./packages/core-jest-matchers/node_modules
-            - ./packages/core-json-rpc/node_modules
       - run:
           name: Create .core/database directory
           command: mkdir -p $HOME/.core/database

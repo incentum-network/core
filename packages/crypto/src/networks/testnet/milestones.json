@@ -25,7 +25,8 @@
                 "contractAction": 500000000,
                 "saveTemplate": 500000000,
                 "unusedOutputs": 500000000,
-                "searchTemplate": 500000000
+                "searchTemplate": 500000000,
+                "searchInstance": 500000000
             }
         },
         "vendorFieldLength": 64,

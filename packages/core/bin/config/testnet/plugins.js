@@ -35,6 +35,7 @@ module.exports = {
                 saveTemplate: 500,
                 unusedOutputs: 100,
                 searchTemplate: 100,
+                searchInstance: 100,
             },
         },
     },
