@@ -9,5 +9,6 @@ export const transformWallet = model => {
         balance: +Utils.BigNumber.make(model.balance).toFixed(),
         isDelegate: !!model.username,
         vote: model.vote,
+        praxis: model.praxis || {},
     };
 };

@@ -1030,6 +1030,46 @@
     "@hapi/bourne" "1.x.x"
     "@hapi/hoek" "6.x.x"
 
+"@incentum/crypto@^2.4.0":
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/@incentum/crypto/-/crypto-2.4.0.tgz#51f13499f01c0f1dcc3a41408934f61fc734a0eb"
+  integrity sha512-iW0FXwCOefEjrX5gZEBeTphiUPs0a6z0BA1Bzy7PCcl6iuJqTUef0unlP89eD9wKiDfJl3JyRDlNiFxUgykTXA==
+  dependencies:
+    "@hapi/joi" "^15.0.3"
+    ajv "^6.10.0"
+    ajv-keywords "^3.4.0"
+    bcrypto "^3.1.11"
+    bignumber.js "^8.1.1"
+    bip32 "^2.0.3"
+    bip39 "^3.0.2"
+    browserify-aes "^1.2.0"
+    bs58 "^4.0.1"
+    bs58check "^2.1.2"
+    buffer-xor "^2.0.2"
+    bytebuffer "^5.0.1"
+    dayjs "^1.8.14"
+    deepmerge "^3.2.0"
+    lodash.camelcase "^4.3.0"
+    lodash.get "^4.4.2"
+    lodash.set "^4.3.2"
+    lodash.sumby "^4.6.0"
+    node-forge "^0.8.4"
+    otplib "^11.0.0"
+    pluralize "^7.0.0"
+    tiny-glob "^0.2.6"
+    wif "^2.0.6"
+
+"@incentum/praxis-client@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.7.tgz#ff8342cb794013db1f34cfacf0bb7bbbcf5334bf"
+  integrity sha512-Dmw4Un+udE7nGbTcKaH9oEphIrIVp9LjbBRcZUM1gSP7wqeLZIitd6u+Dflni6g06ZQ2Js3tHbgLEsj+ffpDeA==
+  dependencies:
+    "@arkecosystem/client" "^0.1.23"
+    "@incentum/crypto" "^2.4.0"
+    "@incentum/praxis-interfaces" "^1.0.342"
+    axios "^0.19.0"
+    bytebuffer "^5.0.1"
+
 "@incentum/praxis-contracts@^1.0.339":
   version "1.0.339"
   resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.339.tgz#7bf6fedf4965d08b08438fb401a8a3cd35593ef9"
@@ -1047,13 +1087,13 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.354":
-  version "1.0.354"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.354.tgz#bf72af6af7dec33d6d397ceb0326ace4fee72d27"
-  integrity sha512-E3QLhWFwPdmm46r7NVKmXln+4Rv2eJ6w1y8JK0u1g3FoGHZNQkmcGttKfBRmj8MLtg32DCnERMu4IA9ml5RBTg==
+"@incentum/praxis-db@^1.0.355":
+  version "1.0.355"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.355.tgz#2fca798172890087f034eefd5ea8674b3fd1c23d"
+  integrity sha512-MsMYEQQ/fWKuxkXP/3NQaOZoXqv642TcywnZacP6rkx1Lm9zbLSWeg79QbdjjMgCJxbN4o9TQL4knXHvhxeQlA==
   dependencies:
     "@incentum/praxis-contracts" "^1.0.339"
-    "@incentum/praxis-interfaces" "^1.0.341"
+    "@incentum/praxis-interfaces" "^1.0.342"
     "@types/lodash" "^4.14.113"
     bignumber.js "^8.1.1"
     chai "^4.2.0"
@@ -1069,6 +1109,18 @@
   version "1.0.341"
   resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.341.tgz#c0d4489a24dcfdc5ce34d3a26b1bd2868d20eb90"
   integrity sha512-n395m0qMT7OvMj32tbAWE7B+P86epreV9MZevn/Yq971FkKHKza2cNGk7P/pnlS1SQgbDZtwRfz7MBlaibnqyw==
+  dependencies:
+    "@types/crypto-js" "^3.1.40"
+    "@types/lodash" "^4.14.113"
+    canonical-json "0.0.4"
+    crypto-js "^3.1.9-1"
+    elliptic "^6.4.0"
+    lodash "^4.17.10"
+
+"@incentum/praxis-interfaces@^1.0.342":
+  version "1.0.342"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.342.tgz#fb26cad1cf2eb3801e8653586c05c6c23462be57"
+  integrity sha512-zJTbrASXx3uB7HzKjbmD6cyXALB8XOEr/WrHevBTLHOAfwi4giOPQY+KNOgKyLm7CPVE0jahVWulZpl9qOIGkw==
   dependencies:
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"
@@ -3768,6 +3820,14 @@ axios@^0.18.0:
     follow-redirects "^1.3.0"
     is-buffer "^1.1.5"
 
+axios@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.19.0.tgz#8e09bff3d9122e133f7b8101c8fbdd00ed3d2ab8"
+  integrity sha512-1uvKqKQta3KBxIz14F2v06AEHZ/dIoeKfbTRkK1E5oqjDnuEerLmYTgJB5AiQZHJcljpg1TuRzdjDR06qNk0DQ==
+  dependencies:
+    follow-redirects "1.5.10"
+    is-buffer "^2.0.2"
+
 b64@4.x.x:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/b64/-/b64-4.1.2.tgz#7015372ba8101f7fb18da070717a93c28c8580d8"
@@ -5456,7 +5516,7 @@ debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.8, debug@^2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@3.1.0:
+debug@3.1.0, debug@=3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
   integrity sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
@@ -6564,6 +6624,13 @@ fn-name@~2.0.1:
   resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
   integrity sha1-UhTXU3pNBqSjAcDMJi/rhBiAAuc=
 
+follow-redirects@1.5.10:
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
+  integrity sha512-0V5l4Cizzvqt5D44aTXbFZz+FtyXV1vrDN6qrelxtfYQKW0KO0W2T/hkE8xvGa/540LkZlkaUjO4ailYTFtHVQ==
+  dependencies:
+    debug "=3.1.0"
+
 follow-redirects@^1.3.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
@@ -7638,6 +7705,11 @@ is-buffer@^1.0.2, is-buffer@^1.1.5:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-1.1.6.tgz#efaa2ea9daa0d7ab2ea13a97b2b8ad51fefbe8be"
   integrity sha512-NcdALwpXkTm5Zvvbk7owOUSvVvBKDgKP5/ewfXEznmQFfs4ZRmanOeKBTjRVjka3QFoN6XJ+9F3USqfHqTaU5w==
+
+is-buffer@^2.0.2:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/is-buffer/-/is-buffer-2.0.3.tgz#4ecf3fcf749cbd1e472689e109ac66261a25e725"
+  integrity sha512-U15Q7MXTuZlrbymiz95PJpZxu8IlipAp4dtS3wOdgPXx3mqBnslrWU14kxfHB+Py/+2PVKSr37dMAgM2A4uArw==
 
 is-callable@^1.1.4:
   version "1.1.4"

@@ -21,12 +21,17 @@
                 "timelockTransfer": 0,
                 "multiPayment": 0,
                 "delegateResignation": 2500000000,
-                "contractStart": 500000000,
+
                 "contractAction": 500000000,
+                "contractFromAction": 500000000,
+                "contractFromInstance": 500000000,
+                "contractStart": 500000000,
+                "matchSchemas": 500000000,
+                "saveSchemas": 500000000,
                 "saveTemplate": 500000000,
-                "unusedOutputs": 500000000,
                 "searchTemplate": 500000000,
-                "searchInstance": 500000000
+                "searchInstance": 500000000,
+                "unusedOutputs": 500000000
             }
         },
         "vendorFieldLength": 64,
