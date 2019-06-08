@@ -22,16 +22,18 @@
                 "multiPayment": 0,
                 "delegateResignation": 2500000000,
 
-                "contractAction": 500000000,
+                "contractAction": 1000000000,
                 "contractFromAction": 500000000,
                 "contractFromInstance": 500000000,
-                "contractStart": 500000000,
+                "contractStart": 1000000000,
                 "matchSchemas": 500000000,
-                "saveSchemas": 500000000,
-                "saveTemplate": 500000000,
+                "saveSchemas": 1000000000,
+                "saveTemplate": 1000000000,
                 "searchTemplate": 500000000,
                 "searchInstance": 500000000,
-                "unusedOutputs": 500000000
+                "unusedOutputs": 500000000,
+                "outputToAccount": 100000000,
+                "accountToOutput": 100000000
             }
         },
         "vendorFieldLength": 64,

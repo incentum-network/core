@@ -41,6 +41,8 @@ module.exports = {
                 searchTemplate: 100,
                 searchInstance: 100,
                 unusedOutputs: 100,
+                accountToOutput: 100,
+                outputToAccount: 100,
             },
         },
     },
