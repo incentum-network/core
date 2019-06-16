@@ -2,7 +2,12 @@ module.exports = {
     "@arkecosystem/core-event-emitter": {},
     "@arkecosystem/core-logger-pino": {},
     "@arkecosystem/core-state": {},
-    "@incentum/praxis-transactions": {},
+    "@incentum/praxis-transactions": {
+        enabled: true,
+        ethStartingBlock: process.env.PRAXIS_ETH_ADDRESS || 7968100,
+        ethAddress: process.env.PRAXIS_ETH_ADDRESS || "0x45b1b79680ee0631ecb55b026d0f6c7a076f0d52",
+        authorizedCoinSenderPassphrase: process.env.PRAXIS_COIN_PASSPHRASE || "clay harbor enemy utility margin pretty hub comic piece aerobic umbrella acquire",
+    },
     "@arkecosystem/core-database-postgres": {
         connection: {
             host: process.env.CORE_DB_HOST || "localhost",

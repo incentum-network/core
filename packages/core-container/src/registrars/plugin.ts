@@ -78,7 +78,9 @@ export class PluginRegistrar {
 
     private logInfo(msg: string, force?: boolean): void {
         const logger = (this.container as Container.IContainer).resolvePlugin<Logger.ILogger>("logger");
-        if (logger && (!!force || false)) { logger.info(msg)}
+        if (logger && (!!force || false)) {
+            logger.info(msg);
+        }
     }
 
     /**
@@ -92,6 +94,7 @@ export class PluginRegistrar {
         try {
             item = this.resolve(plugin);
         } catch (error) {
+            console.log("plugin error", error);
             this.failedPlugins[plugin] = error;
             return;
         }
@@ -193,7 +196,6 @@ export class PluginRegistrar {
      */
     private resolve(plugin) {
         let item: any = require(plugin);
-
         if (!item.plugin) {
             item = { plugin: item };
         }
