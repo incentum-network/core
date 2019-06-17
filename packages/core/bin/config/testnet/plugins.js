@@ -5,8 +5,14 @@ module.exports = {
     "@incentum/praxis-transactions": {
         enabled: true,
         ethStartingBlock: process.env.PRAXIS_ETH_ADDRESS || 7968100,
-        ethAddress: process.env.PRAXIS_ETH_ADDRESS || "0x45b1b79680ee0631ecb55b026d0f6c7a076f0d52",
-        authorizedCoinSenderPassphrase: process.env.PRAXIS_COIN_PASSPHRASE || "clay harbor enemy utility margin pretty hub comic piece aerobic umbrella acquire",
+        ethAddress: process.env.PRAXIS_ETH_ADDRESS,
+        ethEndpoint: process.env.PRAXIS_ETH_ENDPOINT,
+        arkAddress: process.env.PRAXIS_ARK_ADDRESS,
+        arkEndpoint: process.env.PRAXIS_ARK_ENDPOINT,
+        authorizedCoinSenderPassphrase: process.env.PRAXIS_COIN_PASSPHRASE,
+        itum: process.env.PRAXIS_ITUM_PRICE,
+        ethDiscount: process.env.PRAXIS_ETH_DISCOUNT,
+        arkDiscount: process.env.PRAXIS_ARK_DISCOUNT,
     },
     "@arkecosystem/core-database-postgres": {
         connection: {
@@ -48,6 +54,7 @@ module.exports = {
                 unusedOutputs: 100,
                 accountToOutput: 100,
                 outputToAccount: 100,
+                coinToOutput: 100,
             },
         },
     },

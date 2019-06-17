@@ -33,7 +33,8 @@
                 "searchInstance": 500000000,
                 "unusedOutputs": 500000000,
                 "outputToAccount": 100000000,
-                "accountToOutput": 100000000
+                "accountToOutput": 100000000,
+                "coinToOutput": 100000000
             }
         },
         "vendorFieldLength": 64,
