@@ -1145,10 +1145,10 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.375":
-  version "1.0.375"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.375.tgz#b21b9a240ca5879dacc9a095ec225d0144d15804"
-  integrity sha512-rSYQNn2x9GPtDlS27f6Uc/iZV/+aJsyI9nO5EF0mvJAL7C0/P/7ItHztAXJKhUNYOE0zlOH7sX8xblYReMWgCQ==
+"@incentum/praxis-db@^1.0.376":
+  version "1.0.376"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.376.tgz#c4b6f76583a58a4157c70ebc80c026af09a488df"
+  integrity sha512-q3PCR3lsrqu/NqVxZ43tCfQ2ZX4q1cOG7Qbjq6Zlv/Kc/IEMqmcXwXdPJyJuFb2jZ6bfbMFPvIRnfIp6A/g8jw==
   dependencies:
     "@incentum/praxis-contracts" "^1.0.352"
     "@incentum/praxis-interfaces" "^1.0.349"
