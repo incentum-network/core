@@ -1088,10 +1088,10 @@
     lodash.set "^4.3.2"
     micromatch "^4.0.2"
 
-"@incentum/crypto@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@incentum/crypto/-/crypto-2.4.0.tgz#51f13499f01c0f1dcc3a41408934f61fc734a0eb"
-  integrity sha512-iW0FXwCOefEjrX5gZEBeTphiUPs0a6z0BA1Bzy7PCcl6iuJqTUef0unlP89eD9wKiDfJl3JyRDlNiFxUgykTXA==
+"@incentum/crypto@^2.4.3":
+  version "2.4.3"
+  resolved "https://registry.yarnpkg.com/@incentum/crypto/-/crypto-2.4.3.tgz#4288cb4120e68de1b5ad6fe21501e0a9b946a168"
+  integrity sha512-ROrct4ZVIUGUERaKF3IdmvRZGyPK2YJvrnFQDqlS6/3JyvqUvr5fSPhIGcytuyR9zymaGJGQgn/ytyphQmyBjQ==
   dependencies:
     "@hapi/joi" "^15.0.3"
     ajv "^6.10.0"
@@ -1117,13 +1117,13 @@
     tiny-glob "^0.2.6"
     wif "^2.0.6"
 
-"@incentum/praxis-client@^0.0.22":
-  version "0.0.22"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.22.tgz#025cbb710e7d1e8d004042d38b8708c534f702db"
-  integrity sha512-BkMsdojMVde2wrPYy8iVhxtklzrFnT2eY0/YNQ76uL8nLZBhFOop4vXm0xb72KMYbBaMElikp8ffpbX5P+pUqQ==
+"@incentum/praxis-client@^0.0.25":
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.25.tgz#6d36d113cebb99c66d3372ae1f9e3410ff3619f5"
+  integrity sha512-uHwSNNLIJyMl0r+wg9+RoWIbai7AvjHvtGRpONOlnhQdTUHkt/RK1lRCaYoSvhrNpvWankhLSVGWGC4wJ/KlHQ==
   dependencies:
     "@arkecosystem/client" "^0.1.23"
-    "@incentum/crypto" "^2.4.0"
+    "@incentum/crypto" "^2.4.3"
     "@incentum/praxis-interfaces" "^1.0.349"
     axios "^0.19.0"
     bytebuffer "^5.0.1"

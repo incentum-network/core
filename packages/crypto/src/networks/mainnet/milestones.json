@@ -20,7 +20,21 @@
                 "ipfs": 0,
                 "timelockTransfer": 0,
                 "multiPayment": 0,
-                "delegateResignation": 0
+                "delegateResignation": 0,
+
+                "contractAction": 50000000,
+                "contractFromAction": 10000000,
+                "contractFromInstance": 10000000,
+                "contractStart": 50000000,
+                "matchSchemas": 10000000,
+                "saveSchemas": 100000000,
+                "saveTemplate": 100000000,
+                "searchTemplate": 10000000,
+                "searchInstance": 10000000,
+                "unusedOutputs": 10000000,
+                "outputToAccount": 10000000,
+                "accountToOutput": 10000000,
+                "coinToOutput": 10000000
             }
         },
         "vendorFieldLength": 255

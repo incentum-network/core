@@ -25,7 +25,8 @@ export class Address {
         payload.writeUInt8(networkVersion, 0);
         buffer.copy(payload, 1);
 
-        return bs58check.encode(payload);
+        const address = bs58check.encode(payload);
+        return address;
     }
 
     public static fromMultiSignatureAsset(asset: IMultiSignatureAsset, networkVersion?: number): string {

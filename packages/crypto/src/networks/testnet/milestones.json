@@ -22,19 +22,19 @@
                 "multiPayment": 0,
                 "delegateResignation": 0,
 
-                "contractAction": 1000000000,
-                "contractFromAction": 500000000,
-                "contractFromInstance": 500000000,
-                "contractStart": 1000000000,
-                "matchSchemas": 500000000,
-                "saveSchemas": 1000000000,
-                "saveTemplate": 1000000000,
-                "searchTemplate": 500000000,
-                "searchInstance": 500000000,
-                "unusedOutputs": 500000000,
-                "outputToAccount": 100000000,
-                "accountToOutput": 100000000,
-                "coinToOutput": 100000000
+                "contractAction": 50000000,
+                "contractFromAction": 10000000,
+                "contractFromInstance": 10000000,
+                "contractStart": 50000000,
+                "matchSchemas": 10000000,
+                "saveSchemas": 100000000,
+                "saveTemplate": 100000000,
+                "searchTemplate": 10000000,
+                "searchInstance": 10000000,
+                "unusedOutputs": 10000000,
+                "outputToAccount": 10000000,
+                "accountToOutput": 10000000,
+                "coinToOutput": 10000000
             }
         },
         "vendorFieldLength": 255

@@ -17,8 +17,8 @@ export class StateBuilder {
         let steps = transactionHandlers.length + 1;
 
         // FIXME: skip state generation of new tx types unless we are on testnet (until develop is on 2.6)
-        const aip11 =
-            Managers.configManager.getMilestone().aip11 && Managers.configManager.get("network.name") === "testnet";
+        const aip11 = true;
+        //    Managers.configManager.getMilestone().aip11 && Managers.configManager.get("network.name") === "testnet";
         if (!aip11) {
             steps -= 4;
         }
