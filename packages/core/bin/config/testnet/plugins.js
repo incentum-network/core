@@ -14,6 +14,8 @@ module.exports = {
         itum: process.env.PRAXIS_ITUM_PRICE,
         ethDiscount: process.env.PRAXIS_ETH_DISCOUNT,
         arkDiscount: process.env.PRAXIS_ARK_DISCOUNT,
+        minPurchaseAmount: process.env.PRAXIS_MIN_PURCHASE,
+        maxPurchaseAmount: process.env.PRAXIS_MAX_PURCHASE,
     },
     "@arkecosystem/core-database-postgres": {
         connection: {
