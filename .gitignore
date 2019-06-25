@@ -60,9 +60,6 @@ packages/**/dist/
 # Databases
 *.sqlite
 
-# Random
-docker/development
-
 #Webstorm/Intellij
 .idea
 
