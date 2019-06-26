@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "praxis",
+            "script": "yarn",
+            "args": "start:testnet"
+        }
+    ]
+}
