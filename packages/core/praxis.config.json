@@ -3,7 +3,7 @@
         {
             "name": "praxis",
             "script": "yarn",
-            "args": "start:testnet"
+            "args": "full:testnet"
         }
     ]
 }
