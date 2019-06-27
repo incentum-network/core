@@ -13,6 +13,6 @@
     "client": {
         "token": "PRAX",
         "symbol": "☧",
-        "explorer": "http://192.168.33.10:4200"
+        "explorer": "http://testnet.incentum.network:4200"
     }
 }
