@@ -1145,10 +1145,10 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.390":
-  version "1.0.390"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.390.tgz#c11d1e5b110de1a61320b37f96a7747132fa7f8c"
-  integrity sha512-Q6IHlRxYyCZr4R/I+39LNXKdAp9nw3b3ELv68KQMnsHtJdFaLgxzas2+wOb0zamTnaQt/dJ/nXz/g1jxskb7dA==
+"@incentum/praxis-db@^1.0.391":
+  version "1.0.391"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.391.tgz#d84015ff44bb3902c75f1e19a659ee3eaa6c3ef5"
+  integrity sha512-ueGhuvBN9bLgd9omPVO+6zfcPmg8JKph006ub6bdHdTuh91qtKgk/CfTKKOszqqmfxnLC8GBWUnKntoXWcz31g==
   dependencies:
     "@incentum/praxis-contracts" "^1.0.356"
     "@incentum/praxis-interfaces" "^1.0.351"
@@ -1162,6 +1162,7 @@
     tslint "^5.12.1"
     typeorm "^0.2.7"
     varstruct "^6.1.2"
+    vm2 "^3.8.2"
 
 "@incentum/praxis-interfaces@^1.0.351":
   version "1.0.351"
@@ -15422,6 +15423,11 @@ vision@^5.4.4:
     hoek "6.x.x"
     items "2.x.x"
     joi "14.x.x"
+
+vm2@^3.8.2:
+  version "3.8.2"
+  resolved "https://registry.yarnpkg.com/vm2/-/vm2-3.8.2.tgz#7744c40f669c079db4fda44b8edae64afd26cfb0"
+  integrity sha512-FE9slf0o4YoD2Jf7VEjytHTac2SMt2J4ahf9Tw9YLLVqJm0DQiMpmN+I0+RsnOZ0kb7PyeR1rLxathXZWJ23kg==
 
 vscode-languageserver-types@^3.5.0:
   version "3.14.0"
