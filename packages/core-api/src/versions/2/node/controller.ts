@@ -53,6 +53,16 @@ export class NodeController extends Controller {
                     nethash: network.nethash,
                     slip44: network.slip44,
                     wif: network.wif,
+                    feeStatistics: [
+                        {
+                            type: 0,
+                            fees: {
+                                minFee: 333000,
+                                maxFee: 10000000,
+                                avgFee: 2035727,
+                            },
+                        },
+                    ],
                     token: network.client.token,
                     symbol: network.client.symbol,
                     explorer: network.client.explorer,
