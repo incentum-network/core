@@ -8,12 +8,15 @@ module.exports = {
         ethStartingBlock: process.env.PRAXIS_ETH_ADDRESS || 7968100,
         ethAddress: process.env.PRAXIS_ETH_ADDRESS,
         ethEndpoint: process.env.PRAXIS_ETH_ENDPOINT,
+        arkWallet: process.env.PRAXIS_ARK_WALLET,
         arkAddress: process.env.PRAXIS_ARK_ADDRESS,
         arkEndpoint: process.env.PRAXIS_ARK_ENDPOINT,
         authorizedCoinSenderPassphrase: process.env.PRAXIS_COIN_PASSPHRASE,
         itum: process.env.PRAXIS_ITUM_PRICE,
         ethDiscount: process.env.PRAXIS_ETH_DISCOUNT,
         arkDiscount: process.env.PRAXIS_ARK_DISCOUNT,
+        minPurchaseAmount: process.env.PRAXIS_MIN_PURCHASE,
+        maxPurchaseAmount: process.env.PRAXIS_MAX_PURCHASE,
     },
     "@arkecosystem/core-database-postgres": {
         connection: {
