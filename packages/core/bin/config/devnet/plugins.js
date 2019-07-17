@@ -8,6 +8,7 @@ module.exports = {
         ethStartingBlock: process.env.PRAXIS_ETH_ADDRESS || 7968100,
         ethAddress: process.env.PRAXIS_ETH_ADDRESS,
         ethEndpoint: process.env.PRAXIS_ETH_ENDPOINT,
+        arkGenesis: process.env.PRAXIS_ARK_GENESIS,
         arkWallet: process.env.PRAXIS_ARK_WALLET,
         arkAddress: process.env.PRAXIS_ARK_ADDRESS,
         arkEndpoint: process.env.PRAXIS_ARK_ENDPOINT,

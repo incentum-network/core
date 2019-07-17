@@ -78,3 +78,6 @@ transaction-pool.sqlite-wal
 
 # P2P
 /peers.json
+
+.npmrc
+.env.sensitive
