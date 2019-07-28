@@ -18,6 +18,7 @@ module.exports = {
         arkDiscount: process.env.PRAXIS_ARK_DISCOUNT,
         minPurchaseAmount: process.env.PRAXIS_MIN_PURCHASE,
         maxPurchaseAmount: process.env.PRAXIS_MAX_PURCHASE,
+        authorizedCoinSenderPublicKey: process.env.PRAXIS_SENDER_PUBLICKEY,
     },
     "@arkecosystem/core-database-postgres": {
         connection: {
