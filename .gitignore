@@ -82,4 +82,4 @@ transaction-pool.sqlite-wal
 .npmrc
 .env.sensitive
 
-delegates.json
+**/config-rel/**/delegates.json
