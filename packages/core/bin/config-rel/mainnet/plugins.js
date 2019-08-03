@@ -4,6 +4,7 @@ module.exports = {
     "@arkecosystem/core-state": {},
     "@incentum/praxis-transactions": {
         enabled: true,
+        network: 55,
         ethStartingBlock: process.env.PRAXIS_ETH_ADDRESS || 7968100,
         ethAddress: process.env.PRAXIS_ETH_ADDRESS,
         ethEndpoint: process.env.PRAXIS_ETH_ENDPOINT,

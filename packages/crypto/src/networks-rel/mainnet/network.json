@@ -1,0 +1,18 @@
+{
+    "name": "mainnet",
+    "messagePrefix": "PRAX message:\n",
+    "bip32": {
+        "public": 46090600,
+        "private": 46089520
+    },
+    "pubKeyHash": 55,
+    "nethash": "f9935f4510a6bdaca351c042f028545db3ab1ad3770027f662e2993cb24a7ff1",
+    "wif": 20,
+    "slip44": 111,
+    "aip20": 0,
+    "client": {
+        "token": "PRAX",
+        "symbol": "☧",
+        "explorer": "http://192.168.33.10:4200"
+    }
+}
