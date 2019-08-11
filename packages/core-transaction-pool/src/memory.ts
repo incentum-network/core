@@ -34,7 +34,7 @@ export class Memory {
             const expirationContext = {
                 blockTime: Managers.configManager.getMilestone(currentHeight).blocktime,
                 currentHeight,
-                now: Crypto.Slots.getTime()
+                now: Crypto.Slots.getTime(),
             };
 
             this.all.sort((a, b) => {
@@ -70,14 +70,14 @@ export class Memory {
         const expirationContext = {
             blockTime: Managers.configManager.getMilestone(currentHeight).blocktime,
             currentHeight,
-            now: Crypto.Slots.getTime()
+            now: Crypto.Slots.getTime(),
         };
 
         if (!this.byExpirationIsSorted) {
             this.byExpiration.sort(
                 (a, b) =>
                     this.calculateTransactionExpiration(a, expirationContext) -
-                    this.calculateTransactionExpiration(b, expirationContext)
+                    this.calculateTransactionExpiration(b, expirationContext),
             );
             this.byExpirationIsSorted = true;
         }
@@ -88,7 +88,6 @@ export class Memory {
             if (this.calculateTransactionExpiration(transaction, expirationContext) > currentHeight) {
                 break;
             }
-
             transactions.push(transaction);
         }
 
@@ -164,7 +163,7 @@ export class Memory {
         const expirationContext = {
             blockTime: Managers.configManager.getMilestone(currentHeight).blocktime,
             currentHeight,
-            now: Crypto.Slots.getTime()
+            now: Crypto.Slots.getTime(),
         };
         const expiration: number = this.calculateTransactionExpiration(transaction, expirationContext);
         if (expiration !== null) {
@@ -290,10 +289,10 @@ export class Memory {
     private calculateTransactionExpiration(
         transaction: Interfaces.ITransaction,
         context: {
-            blockTime: number,
-            currentHeight: number,
-            now: number,
-        }
+            blockTime: number;
+            currentHeight: number;
+            now: number;
+        },
     ): number {
         if (transaction.type === Enums.TransactionTypes.TimelockTransfer) {
             // tslint:disable-next-line:no-null-keyword
@@ -312,11 +311,9 @@ export class Memory {
 
         // Both now and transaction.data.timestamp use [number of seconds since the genesis block].
         const createdSecondsAgo: number = context.now - transaction.data.timestamp;
-
         const createdBlocksAgo: number = Math.floor(createdSecondsAgo / context.blockTime);
-
         const createdAtHeight: number = context.currentHeight - createdBlocksAgo;
-
-        return createdAtHeight + this.maxTransactionAge;
+        return context.currentHeight + 1;
+        // return createdAtHeight + this.maxTransactionAge;
     }
 }

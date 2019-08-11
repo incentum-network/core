@@ -1128,10 +1128,10 @@
     axios "^0.19.0"
     bytebuffer "^5.0.1"
 
-"@incentum/praxis-contracts@^1.0.357":
-  version "1.0.357"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.357.tgz#e245e002ab819a02bc2977a99fe3f9dc85dce7e3"
-  integrity sha512-XgcASkrTxrRzvPle5dN4fLihcN/e6/n5/uKP8NA4THhUwFaVP1i14Bb/mlQzKZf9cfWolc3mzYa3I9zBsnl2NA==
+"@incentum/praxis-contracts@^1.0.359":
+  version "1.0.359"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.359.tgz#845b73e944184f2929060d82531ddd82d47278a0"
+  integrity sha512-6xpSenAdybVKiP2/SDqq1e8E6PpEY5YVGK6zz5ThtVLZZS7LO5QqsI8ZY057hTttwYPpo8epHXseJ63FoU7WNw==
   dependencies:
     "@incentum/praxis-interfaces" "^1.0.351"
     "@types/crypto-js" "^3.1.40"
@@ -1145,14 +1145,18 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.396":
-  version "1.0.396"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.396.tgz#7f3c565d1198a73c6bd042bd66b3588f8048b051"
-  integrity sha512-aM2ZCen/KMQo8JB7yVf2F0G5WFQg0lfdJub3joIvsj37P1+65TvFytRKPykANFz1vyrrL4k65dNb8UM/AzZSBQ==
+"@incentum/praxis-db@^1.0.402":
+  version "1.0.402"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.402.tgz#9f73f4af0146efb945314fc58f65a945058d9ba8"
+  integrity sha512-IgMfYiHTQyBoocssot10kKkVNKFAe3nNnZyaaf+wIsZZl4AEvd4rrubUWe099UDNMI+KTL5x8PA3rPzUGi0bTQ==
   dependencies:
-    "@incentum/praxis-contracts" "^1.0.357"
+    "@incentum/crypto" "^2.4.3"
+    "@incentum/praxis-client" "^0.0.30"
+    "@incentum/praxis-contracts" "^1.0.359"
     "@incentum/praxis-interfaces" "^1.0.351"
+    "@incentum/praxis-spaces" "^1.0.367"
     "@types/lodash" "^4.14.113"
+    axios "^0.19.0"
     bignumber.js "^8.1.1"
     chai "^4.2.0"
     deterministic-json "^1.0.5"
@@ -1175,6 +1179,19 @@
     crypto-js "^3.1.9-1"
     elliptic "^6.4.0"
     lodash "^4.17.10"
+
+"@incentum/praxis-spaces@^1.0.367":
+  version "1.0.367"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-spaces/-/praxis-spaces-1.0.367.tgz#aa7fa1fe96e80e5324199b6377a13d6a4f5244c1"
+  integrity sha512-3dNLD4iP4FR5xW45tqTQ2Jpr6bPMFPMxpL5myCgOk1HMuxk23hs2svW1VPflpXkLxBNuow2tmWMgshQVhh2qNw==
+  dependencies:
+    "@incentum/praxis-interfaces" "^1.0.351"
+    "@types/lodash" "^4.14.113"
+    axios "^0.19.0"
+    detect-node "^2.0.4"
+    folder-hash "^3.1.0"
+    lodash "^4.17.10"
+    rimraf "^2.6.3"
 
 "@jest/console@^24.7.1":
   version "24.7.1"
@@ -6050,6 +6067,11 @@ detect-newline@^2.1.0:
   resolved "https://registry.yarnpkg.com/detect-newline/-/detect-newline-2.1.0.tgz#f41f1c10be4b00e87b5f13da680759f2c5bfd3e2"
   integrity sha1-9B8cEL5LAOh7XxPaaAdZ8sW/0+I=
 
+detect-node@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/detect-node/-/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
+  integrity sha512-ZIzRpLJrOj7jjP2miAtgqIfmzbxa4ZOr5jJc601zklsfEx9oTzmmj2nVpIPRpNlRTIh8lc1kyViIY7BWSGNmKw==
+
 deterministic-json@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/deterministic-json/-/deterministic-json-1.0.5.tgz#718230459840122a1558007b483cf72753c00f21"
@@ -7074,6 +7096,15 @@ fn-name@~2.0.1:
   resolved "https://registry.yarnpkg.com/fn-name/-/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
   integrity sha1-UhTXU3pNBqSjAcDMJi/rhBiAAuc=
 
+folder-hash@^3.1.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/folder-hash/-/folder-hash-3.2.0.tgz#a9c5d9d6eafe536318d1ad0b61e8aa5467e7093a"
+  integrity sha512-1wrROxgM1mE7VcokgO5wrSC2HhKBDIyzYZ+cMVpSttqfmZKI98qWI4XNYZqIXTO3cvLvZE7LV4dZuc/x1DqfVw==
+  dependencies:
+    debug "^4.1.1"
+    graceful-fs "~4.2.0"
+    minimatch "~3.0.4"
+
 follow-redirects@1.5.10:
   version "1.5.10"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
@@ -7604,6 +7635,11 @@ graceful-fs@^4.1.10, graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.
   version "4.1.15"
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.1.15.tgz#ffb703e1066e8a0eeaa4c8b80ba9253eeefbfb00"
   integrity sha512-6uHUhOPEBgQ24HM+r6b/QwWfZq+yiFcipKFrOFiBEnWdy5sdzYoi+pJeQaPI5qOLRFqWmAXUPQNsielzdLoecA==
+
+graceful-fs@~4.2.0:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.1.tgz#1c1f0c364882c868f5bff6512146328336a11b1d"
+  integrity sha512-b9usnbDGnD928gJB3LrCmxoibr3VE4U2SMo5PBuBnokWyDADTqDPXg4YpwKF1trpH+UbGp7QLicO3+aWEy0+mw==
 
 "graceful-readlink@>= 1.0.0":
   version "1.0.1"
@@ -10748,7 +10784,7 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
   resolved "https://registry.yarnpkg.com/minimalistic-crypto-utils/-/minimalistic-crypto-utils-1.0.1.tgz#f6c00c1c0b082246e5c4d99dfb8c7c083b2b582a"
   integrity sha1-9sAMHAsIIkblxNmd+4x8CDsrWCo=
 
-minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4:
+minimatch@^3.0.0, minimatch@^3.0.2, minimatch@^3.0.3, minimatch@^3.0.4, minimatch@~3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
