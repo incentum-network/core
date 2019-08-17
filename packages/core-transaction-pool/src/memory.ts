@@ -88,6 +88,7 @@ export class Memory {
             if (this.calculateTransactionExpiration(transaction, expirationContext) > currentHeight) {
                 break;
             }
+
             transactions.push(transaction);
         }
 
@@ -311,9 +312,11 @@ export class Memory {
 
         // Both now and transaction.data.timestamp use [number of seconds since the genesis block].
         const createdSecondsAgo: number = context.now - transaction.data.timestamp;
+
         const createdBlocksAgo: number = Math.floor(createdSecondsAgo / context.blockTime);
+
         const createdAtHeight: number = context.currentHeight - createdBlocksAgo;
-        return context.currentHeight + 1;
-        // return createdAtHeight + this.maxTransactionAge;
+        // return context.currentHeight + 1;
+        return createdAtHeight + this.maxTransactionAge;
     }
 }

@@ -2,16 +2,6 @@
 # yarn lockfile v1
 
 
-"@arkecosystem/client@^0.1.23":
-  version "0.1.23"
-  resolved "https://registry.yarnpkg.com/@arkecosystem/client/-/client-0.1.23.tgz#0dfd29e8c01d668f3edfce471838ef0fd130adf6"
-  integrity sha512-Gz2e+A7nNzSpNM3d4sywxHZfISwP9Jwm1SVreUu66W2jgVl68rCPFTZWiMBuoaKJly5ZZR2t1q5i0Ymqy0/yqQ==
-  dependencies:
-    axios "^0.18.0"
-    lodash.clonedeep "^4.5.0"
-    lodash.orderby "^4.6.0"
-    lodash.shuffle "^4.2.0"
-
 "@arkecosystem/exchange-json-rpc@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@arkecosystem/exchange-json-rpc/-/exchange-json-rpc-1.0.0.tgz#b5bc0fbbf872a1088e7a161319665b5bf127c504"
@@ -1088,10 +1078,10 @@
     lodash.set "^4.3.2"
     micromatch "^4.0.2"
 
-"@incentum/crypto@^2.4.3":
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/@incentum/crypto/-/crypto-2.4.3.tgz#4288cb4120e68de1b5ad6fe21501e0a9b946a168"
-  integrity sha512-ROrct4ZVIUGUERaKF3IdmvRZGyPK2YJvrnFQDqlS6/3JyvqUvr5fSPhIGcytuyR9zymaGJGQgn/ytyphQmyBjQ==
+"@incentum/crypto@^2.4.4":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@incentum/crypto/-/crypto-2.4.4.tgz#dea2cc20950ee857156b29a7fee5e542f9a745ab"
+  integrity sha512-nBdQRPm28mRGxW82HW1k1V9WHY7f314td1CXjwfpDn8OltwTBdc+i7gwcX3FZS4U+o34nGHm61xyQkPpmLEyfQ==
   dependencies:
     "@hapi/joi" "^15.0.3"
     ajv "^6.10.0"
@@ -1117,23 +1107,22 @@
     tiny-glob "^0.2.6"
     wif "^2.0.6"
 
-"@incentum/praxis-client@^0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.30.tgz#f6a64c9805096600dac378b4d6d52334f38dc7f6"
-  integrity sha512-aWAcBQ5NOwuiBGYeNDi5p2Xov5wuZ7Df5z0VgP7QtsUHStE6oGeTSmmhWK66DnOyCQ3mpIYbR7q9J+X0bsFjog==
+"@incentum/praxis-client@^0.0.34":
+  version "0.0.34"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.34.tgz#b173e3188cdf41cd4a96d99b3c5fa4ef45039f51"
+  integrity sha512-bI1dKbFrZDrHktgutmFtw9KVc3VkeZIqnEcHKFHkWBYFj7Bfum43sauSuGDrRCobpQsSouys3dH5m8bQxqaxLg==
   dependencies:
-    "@arkecosystem/client" "^0.1.23"
-    "@incentum/crypto" "^2.4.3"
-    "@incentum/praxis-interfaces" "^1.0.351"
+    "@incentum/crypto" "^2.4.4"
+    "@incentum/praxis-interfaces" "^1.0.352"
     axios "^0.19.0"
     bytebuffer "^5.0.1"
 
-"@incentum/praxis-contracts@^1.0.359":
-  version "1.0.359"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.359.tgz#845b73e944184f2929060d82531ddd82d47278a0"
-  integrity sha512-6xpSenAdybVKiP2/SDqq1e8E6PpEY5YVGK6zz5ThtVLZZS7LO5QqsI8ZY057hTttwYPpo8epHXseJ63FoU7WNw==
+"@incentum/praxis-contracts@^1.0.360":
+  version "1.0.360"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.360.tgz#18151fdd58a81cba3a9c5f20fff56d7df2c0c27f"
+  integrity sha512-dQgamKx7hrQWDTLu7KSyvuXHTmke/lNMlXILMxx6rIvLLye95lwt2fbORa7KxYChLhqfAHM8QzyRPtVyXv2UZw==
   dependencies:
-    "@incentum/praxis-interfaces" "^1.0.351"
+    "@incentum/praxis-interfaces" "^1.0.352"
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"
     bignumber.js "^7.2.1"
@@ -1145,16 +1134,16 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.402":
-  version "1.0.402"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.402.tgz#9f73f4af0146efb945314fc58f65a945058d9ba8"
-  integrity sha512-IgMfYiHTQyBoocssot10kKkVNKFAe3nNnZyaaf+wIsZZl4AEvd4rrubUWe099UDNMI+KTL5x8PA3rPzUGi0bTQ==
+"@incentum/praxis-db@^1.0.406":
+  version "1.0.406"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.406.tgz#8c0fc45021a694f1b21f236893aaf0111d6971f5"
+  integrity sha512-oTvxU7jNP6yWYMmgptXObtdP7EZzZAs31RSmaZz39myVx1hKdIN3J6YRUnq5KIFVFHZS9QKMbAuy3T0U/mRigw==
   dependencies:
-    "@incentum/crypto" "^2.4.3"
-    "@incentum/praxis-client" "^0.0.30"
-    "@incentum/praxis-contracts" "^1.0.359"
-    "@incentum/praxis-interfaces" "^1.0.351"
-    "@incentum/praxis-spaces" "^1.0.367"
+    "@incentum/crypto" "^2.4.4"
+    "@incentum/praxis-client" "^0.0.34"
+    "@incentum/praxis-contracts" "^1.0.360"
+    "@incentum/praxis-interfaces" "^1.0.352"
+    "@incentum/praxis-spaces" "^1.0.368"
     "@types/lodash" "^4.14.113"
     axios "^0.19.0"
     bignumber.js "^8.1.1"
@@ -1168,10 +1157,10 @@
     varstruct "^6.1.2"
     vm2 "^3.8.2"
 
-"@incentum/praxis-interfaces@^1.0.351":
-  version "1.0.351"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.351.tgz#ea3e3c0aa3a3541d9572cb92c1c205d768c43431"
-  integrity sha512-vhJRGX+Tad93SldUpKisTqPDMBe/yKNNgvXQijwWyvx/gNuzmwxmzl3iCJZsFNdxqyilACGOlMka4MaeamWK6A==
+"@incentum/praxis-interfaces@^1.0.352":
+  version "1.0.352"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.352.tgz#5bae8e32a73bc38efe68f640c9d31702dd3a76d5"
+  integrity sha512-q97xW/42gokJWlgFFf86bHkiIH75/h5rLh1+sBGqmjOrP70Z7/gNM1/TUCJVuLmMC/BcYRDJsba8fmRqfEwVnA==
   dependencies:
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"
@@ -1180,12 +1169,12 @@
     elliptic "^6.4.0"
     lodash "^4.17.10"
 
-"@incentum/praxis-spaces@^1.0.367":
-  version "1.0.367"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-spaces/-/praxis-spaces-1.0.367.tgz#aa7fa1fe96e80e5324199b6377a13d6a4f5244c1"
-  integrity sha512-3dNLD4iP4FR5xW45tqTQ2Jpr6bPMFPMxpL5myCgOk1HMuxk23hs2svW1VPflpXkLxBNuow2tmWMgshQVhh2qNw==
+"@incentum/praxis-spaces@^1.0.368":
+  version "1.0.368"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-spaces/-/praxis-spaces-1.0.368.tgz#5fdcc87928ab1991b2876d18d7920cd47948b596"
+  integrity sha512-jsOp8JY4xegzpetZcUSZGvLue0Fiy2uj+ZBxXs3nK2nuxJgB3ofO8/YbI/v2bs0AsMdIlHIWO0+vF5e6UOYvSw==
   dependencies:
-    "@incentum/praxis-interfaces" "^1.0.351"
+    "@incentum/praxis-interfaces" "^1.0.352"
     "@types/lodash" "^4.14.113"
     axios "^0.19.0"
     detect-node "^2.0.4"
