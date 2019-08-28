@@ -1107,22 +1107,22 @@
     tiny-glob "^0.2.6"
     wif "^2.0.6"
 
-"@incentum/praxis-client@^0.0.37":
-  version "0.0.37"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.37.tgz#7a86f8175fd2f1d778b2a7836dad607fc1600661"
-  integrity sha512-+XvvmqiJt/wzJ4wtT1Up91Tnw35+YbXXs9yDThj2ZEq9xpBGAeUiaogmqb7fwW2XFxVnTcG0uyz+/DUIkwoUKg==
+"@incentum/praxis-client@^0.0.39":
+  version "0.0.39"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-client/-/praxis-client-0.0.39.tgz#fc05f208fb098b75e4cdbe4756e75d753bca04d3"
+  integrity sha512-XWcJPiaHnmZEck3BHhyKGILeNCFJjhCqWsmE1wLEZiAUby/+EpYutiPxQcQInihQNqjdrvHSazUZE9aAS56Jkg==
   dependencies:
     "@incentum/crypto" "^2.4.4"
-    "@incentum/praxis-interfaces" "^1.0.355"
+    "@incentum/praxis-interfaces" "^1.0.356"
     axios "^0.19.0"
     bytebuffer "^5.0.1"
 
-"@incentum/praxis-contracts@^1.0.364":
-  version "1.0.364"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.364.tgz#1fab77e759b31807b62399e0c22d4228d63970ed"
-  integrity sha512-a87dG8v0kS08gDyVgafBG5NFTY0+8QDDNXUp9ABcSUOuh1zGxQkS+vx3Jz01PImYIE6SIJsTElgTRJd6GkiTPg==
+"@incentum/praxis-contracts@^1.0.365":
+  version "1.0.365"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-contracts/-/praxis-contracts-1.0.365.tgz#79ad7f544f3b7dd8afcba8bdb94580af1f287f9d"
+  integrity sha512-UGqqG5Q5pkDtWVlOtC8ZB91ODmFrzfcXU6DC7nX1ctlTs81YYA4kOov3rCUunAdZBzW/ujl/z89pDlazewyr5Q==
   dependencies:
-    "@incentum/praxis-interfaces" "^1.0.355"
+    "@incentum/praxis-interfaces" "^1.0.356"
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"
     bignumber.js "^7.2.1"
@@ -1134,16 +1134,16 @@
     lodash "^4.17.10"
     varstruct "^6.1.2"
 
-"@incentum/praxis-db@^1.0.412":
-  version "1.0.412"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.412.tgz#d9a1e5e9d7a0b6812e0e12756fea8522f3eb80be"
-  integrity sha512-FPjYaTz+7xmn8rM3Ndc/q4vBvlyDU0cJWgx69/U7ZSS3/VkEDbmTZFmxS6fr79qZD+9JYUkAQnEjL4avszG5Rg==
+"@incentum/praxis-db@^1.0.413":
+  version "1.0.413"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-db/-/praxis-db-1.0.413.tgz#daed0b749333d0f7fdd403592566f9e3a2775dd0"
+  integrity sha512-L+346yz2ddg+nGjjzgixa7iuXM3/2Ttosch2tdD2s5iZgdwkasmZSpBFa4kDj32e2av5RYEnEF3R67k6RMRddw==
   dependencies:
     "@incentum/crypto" "^2.4.4"
-    "@incentum/praxis-client" "^0.0.37"
-    "@incentum/praxis-contracts" "^1.0.364"
-    "@incentum/praxis-interfaces" "^1.0.355"
-    "@incentum/praxis-spaces" "^1.0.374"
+    "@incentum/praxis-client" "^0.0.39"
+    "@incentum/praxis-contracts" "^1.0.365"
+    "@incentum/praxis-interfaces" "^1.0.356"
+    "@incentum/praxis-spaces" "^1.0.375"
     "@types/lodash" "^4.14.113"
     axios "^0.19.0"
     bignumber.js "^8.1.1"
@@ -1157,10 +1157,10 @@
     varstruct "^6.1.2"
     vm2 "^3.8.2"
 
-"@incentum/praxis-interfaces@^1.0.355":
-  version "1.0.355"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.355.tgz#7645f5cf9ec2a540429d588b9d5cf53c17297eac"
-  integrity sha512-o7Nlq/Mh3o6/4gac7d1lvZ9vAStLtLUFexDYe4ZFB+3gqqFfmsjK+Y8qugAyVqFiCFDc54DDGn/pK1Ec6ojOxQ==
+"@incentum/praxis-interfaces@^1.0.356":
+  version "1.0.356"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-interfaces/-/praxis-interfaces-1.0.356.tgz#7c47f902e2729d052ba1f335274c3de57bbe5d90"
+  integrity sha512-iPYnyxemSYOmyvbhat86ynELwIgcmT2Zw2c/sYo00N8aQqMiCxS6oWx9UHrYh6ylyBfjACgfMgfHFgkfHxQVdg==
   dependencies:
     "@types/crypto-js" "^3.1.40"
     "@types/lodash" "^4.14.113"
@@ -1169,12 +1169,12 @@
     elliptic "^6.4.0"
     lodash "^4.17.10"
 
-"@incentum/praxis-spaces@^1.0.374":
-  version "1.0.374"
-  resolved "https://registry.yarnpkg.com/@incentum/praxis-spaces/-/praxis-spaces-1.0.374.tgz#56e64f336c52eca5d3240663c51f1a449be8d5f7"
-  integrity sha512-I4tE06UP+A3cS6490lw1c8ATAVyCcKGoUJk0l3qzgLRjzGaEVgWEn025R3+gBI03tKjgh/dkidpdvqPVr0wwow==
+"@incentum/praxis-spaces@^1.0.375":
+  version "1.0.375"
+  resolved "https://registry.yarnpkg.com/@incentum/praxis-spaces/-/praxis-spaces-1.0.375.tgz#4094eccb5ec740f87413153099b51f8c66c313b1"
+  integrity sha512-XI1SlmscqE+WVpB6mcMfOikCHcj7D2qeqCqfEkGwIbvUr43ZoW31otqb5hePVuHlca2nhJUMTnb/uRxlVV+2CA==
   dependencies:
-    "@incentum/praxis-interfaces" "^1.0.355"
+    "@incentum/praxis-interfaces" "^1.0.356"
     "@types/lodash" "^4.14.113"
     axios "^0.19.0"
     detect-node "^2.0.4"
