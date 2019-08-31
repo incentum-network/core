@@ -19,6 +19,7 @@ module.exports = {
         minPurchaseAmount: process.env.PRAXIS_MIN_PURCHASE,
         maxPurchaseAmount: process.env.PRAXIS_MAX_PURCHASE,
         authorizedCoinSenderPublicKey: process.env.PRAXIS_SENDER_PUBLICKEY,
+        spacesRootDir: process.env.PRAXIS_SPACES_ROOTDIR || process.env.HOME,
     },
     "@arkecosystem/core-database-postgres": {
         connection: {
